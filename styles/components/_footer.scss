@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.footer {
+  display: grid;
+  place-items: center;
+}
+.new-project {
+  gap: 0.65em;
+  transition: 350ms ease;
+  --bg-color: var(--color-default);
+  background-color: hsl(var(--bg-color));
+  border-radius: 60px;
+  padding: 0.5em 0.75em 0.5em 0.5em;
+  & .icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    @include mq(large) {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+  }
+  & span {
+    color: white;
+  }
+  &:hover {
+    background-color: hsl(var(--bg-color) / 0.8);
+  }
+}

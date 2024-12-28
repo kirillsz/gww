@@ -1,0 +1,5 @@
+.contact-form {
+  display: grid;
+  grid-template-columns: clamp(210px, 30vw, 285px) auto;
+  column-gap: 0.75rem;
+}

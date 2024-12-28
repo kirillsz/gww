@@ -1,95 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { areas, portfolio } from "@/data";
+import ServiceCollection from "@/components/ServiceCollection";
+import PortfolioItem from "@/components/PortfolioItem";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <>
+      <section className="container py-section--lg">
+        <h1 className="fs-800 ls-025 mb-150">
+          Мы создаём <span className="fw-bold">уникальные</span> решения для
+          бизнеса
+        </h1>
+        <p className="fs-600 fw-semibold text-secondary">
+          Ваши идеи - наше вдохновнение
+        </p>
+      </section>
+      <section id="areas" className="service container py-section--lg">
+        <header>
+          <h2 className="fs-700 fw-semibold">Направления</h2>
+        </header>
+        {Object.keys(areas).map((areaName) => (
+          <ServiceCollection
+            key={areaName}
+            heading={areaName}
+            collection={areas[areaName as keyof typeof areas]}
+          />
+        ))}
+      </section>
+      <section id="portfolio" className="portfolio container py-section--lg">
+        <header>
+          <h2 className="mb-h2 fs-700 fw-semibold">Проекты</h2>
+        </header>
+        <div className="portfolio-item-list">
+          {portfolio.map((portfolioItem) => (
+            <PortfolioItem key={portfolioItem.name} content={portfolioItem} />
+          ))}
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </>
   );
 }

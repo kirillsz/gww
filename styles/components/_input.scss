@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+.input {
+  font-weight: var(--fw-medium);
+  text-overflow: ellipsis;
+  padding: 0.625rem;
+  background-color: hsl(var(--color-neutral-800));
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  @include mq(large) {
+    padding: 0.75rem;
+  }
+  &-label {
+  }
+}

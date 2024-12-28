@@ -1,0 +1,34 @@
+@use "../abstracts" as *;
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.ls-025 {
+  letter-spacing: -0.1rem;
+  @include mq(medium) {
+    letter-spacing: -0.15rem;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+.button {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5rem;
+  transition: background-color 350ms ease;
+  color: hsl(var(--color-default--reverse));
+  @include mq(large) {
+    padding: 0.75em 1.75em;
+  }
+
+  & a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    inset: 0;
+  }
+  &[data-type="primary"] {
+    background-color: hsl(var(--color-default));
+    &:is(:hover, :focus) {
+      background-color: hsl(var(--color-default) / 0.8);
+    }
+  }
+  &[data-type="accent"] {
+    background-color: hsl(var(--color-accent--dark));
+    &:is(:hover, :focus) {
+      background-color: hsl(var(--color-accent--dark) / 0.8);
+    }
+  }
+}

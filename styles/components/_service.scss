@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+.service {
+  display: grid;
+  row-gap: 1rem;
+  @include mq(medium) {
+    row-gap: 1.5rem;
+  }
+  @include mq(large) {
+    row-gap: 2rem;
+  }
+}
+.collection {
+  &-heading {
+    margin-bottom: 0.75rem;
+    @include mq(large) {
+      row-gap: 1.5rem;
+    }
+  }
+  &-card {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    row-gap: 0.75rem;
+    padding: 1.5rem 0.75rem;
+    border: 1px solid hsl(var(--color-secondary) / 0.4);
+    border-radius: 8px;
+    @include mq(large) {
+      padding: 2.85rem 1.5rem;
+    }
+    &-list {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+      gap: 1rem;
+    }
+  }
+}

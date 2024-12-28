@@ -1,0 +1,15 @@
+.bg-default {
+  background-color: hsl(var(--color-default));
+}
+.bg-accent--dark {
+  background-color: hsl(var(--color-accent--dark));
+}
+.text-default--reverse {
+  color: hsl(var(--color-default--reverse));
+}
+.text-accent--dark {
+  color: hsl(var(--color-accent--dark));
+}
+.text-secondary {
+  color: hsl(var(--color-secondary));
+}

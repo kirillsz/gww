@@ -1,0 +1,86 @@
+@use "../abstracts/" as *;
+:root {
+  --color-default: 0 0% 5%;
+  --color-default--reverse: 0 0 100%;
+  --color-neutral-800: 0 0% 96%;
+  --color-secondary: 0 0 50%;
+  --color-accent--dark: 227 81% 45%;
+  --color-accent--light: 227 100% 60%;
+
+  --container-max-width: 78rem;
+  --container-padding-inline: 1.25rem;
+
+  --burger-menu-animation: 400ms ease;
+
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --fs-800: clamp(3rem, 5.5vw + 1rem, 6rem); /*  header/h1 */
+  --fs-700: 2rem; /*  header/h2 */
+  --fs-600: 1.25rem; /* header/h3 */
+  --fs-400: 1rem; /* text/main */
+  --fs-300: 0.875rem; /* text/secondary */
+
+  @include mq(medium) {
+    --fs-700: 2.75rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1.125rem;
+  }
+  @include mq(large) {
+    --container-padding-inline: 1.5rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.25rem;
+    --fs-300: 1rem;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: hsl(var(--color-default));
+  background: hsl(var(--color-default--reverse));
+
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  font-family: var(--ff-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  font-weight: 400;
+}
+
+.icon {
+  transition: fill 250ms ease;
+  &:hover {
+    fill: hsl(var(--color-secondary));
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

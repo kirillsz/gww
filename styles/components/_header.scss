@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  @include mq(medium) {
+    padding-top: 1.5rem;
+  }
+  @include mq(medium, max-width) {
+    & .input {
+      padding: 1rem;
+    }
+    & .button {
+      padding: 1rem;
+    }
+  }
+
+  @include mq(medium) {
+    .mobile-nav-toggle {
+      display: none;
+    }
+    .nav-link {
+      &-list {
+        display: none;
+      }
+    }
+    .icon {
+      display: none;
+    }
+    hr {
+      display: none;
+    }
+  }
+}

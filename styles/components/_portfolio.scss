@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+.portfolio {
+  &-item {
+    &-list {
+      display: grid;
+      row-gap: 1.5rem;
+      @include mq(large) {
+        row-gap: 2.5rem;
+      }
+    }
+    &__img {
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      &:hover {
+        & > img {
+          scale: 1.025;
+        }
+      }
+      & > img {
+        transition: scale 500ms ease;
+      }
+    }
+    &__description {
+      padding-left: 4px;
+    }
+    &__description > :first-child {
+      margin-bottom: 0.75rem;
+    }
+  }
+  &-tag {
+    border-radius: 60px;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background: hsl(var(--color-neutral-800));
+    &:first-of-type {
+      background-color: hsl(var(--color-default));
+      color: hsl(var(--color-default--reverse));
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "../abstracts/" as *;
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+  &.align-center {
+    align-items: center;
+  }
+  &.justify-between {
+    justify-content: space-between;
+  }
+  &.grow-1 {
+    flex-grow: 1;
+  }
+}
+.grid {
+  display: grid;
+}
+
+/* Paddings */
+.py-section--lg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include mq(large) {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+}
+.py-section--md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include mq(large) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Margins */
+.mb-h2 {
+  margin-bottom: 1rem;
+  @include mq(medium) {
+    margin-bottom: 1.5rem;
+  }
+  @include mq(large) {
+    margin-bottom: 2rem;
+  }
+}
+.mb-200 {
+  margin-bottom: 1.25rem;
+
+  @include mq(medium) {
+    margin-bottom: 1.5rem;
+  }
+  @include mq(large) {
+    margin-bottom: 2rem;
+  }
+}
+.mb-150 {
+  margin-bottom: 1rem;
+  @include mq(large) {
+    margin-bottom: 1.5rem;
+  }
+}

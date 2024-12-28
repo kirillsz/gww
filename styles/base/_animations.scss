@@ -1,0 +1,14 @@
+.fadeOutOnEnter {
+  animation: fadeOutTransform 250ms ease-in;
+}
+
+@keyframes fadeOutTransform {
+  from {
+    transform: translate(-0.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
