@@ -1,7 +1,8 @@
 ## Описание проекта
 
 Сайт-визитка студии Web-разработки - GWW.
-Автор дизайна & вёрстки: [me](https://github.com/kirillsz)
+
+Создатель дизайна & вёрстки: [me/kirillsz](https://github.com/kirillsz)
 
 ## Project template
 
