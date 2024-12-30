@@ -1,6 +1,6 @@
-import { areas, portfolio } from "@/data";
+import { areas } from "@/data";
 import ServiceCollection from "@/components/ServiceCollection";
-import PortfolioItem from "@/components/PortfolioItem";
+import PortfolioList from "@/components/PortfolioList";
 
 export default function Home() {
   return (
@@ -30,11 +30,7 @@ export default function Home() {
         <header>
           <h2 className="mb-h2 fs-700 fw-semibold">Проекты</h2>
         </header>
-        <div className="portfolio-item-list">
-          {portfolio.map((portfolioItem) => (
-            <PortfolioItem key={portfolioItem.name} content={portfolioItem} />
-          ))}
-        </div>
+        <PortfolioList />
       </section>
     </>
   );
