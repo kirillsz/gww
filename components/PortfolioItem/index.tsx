@@ -15,10 +15,15 @@ const PortfolioItem = ({ name, tags, img, url }: PortfolioItemProps) => {
   return (
     <article className="portfolio-item">
       <div className="portfolio-item__img">
-        <img src={`http://127.0.0.1:9000${img}`} alt="" />
-        <a className="portfolio-item__link" href={url}>
-          <span className="sr-only">Ссылка на {name}</span>
-        </a>
+        <img
+          src={`${process.env.BACKEND_URL}${img}`}
+          alt={`Иллюстрация ${name}`}
+        />
+        {url !== "/" && (
+          <a className="portfolio-item__link" href={url}>
+            <span className="sr-only">Ссылка на {name}</span>
+          </a>
+        )}
       </div>
       <div className="portfolio-item__description">
         <h3 className="fs-600 fw-semibold">{name}</h3>

@@ -1,10 +1,10 @@
-.fadeOutOnEnter {
-  animation: fadeOutTransform 250ms ease-in;
+.fade-out-translate {
+  animation: fade-out-translate 800ms ease-in;
 }
 
-@keyframes fadeOutTransform {
+@keyframes fade-out-translate {
   from {
-    transform: translate(-0.5rem);
+    transform: translateY(0.25rem);
     opacity: 0;
   }
   to {

@@ -1,9 +1,10 @@
 import PortfolioItem from "../PortfolioItem";
-import { BASE_URL } from "@/data";
 export default async function PortfolioList() {
   let data = [];
   try {
-    const response = await fetch(`${BASE_URL}/api/projects/`);
+    const response = await fetch(
+      new URL("/api/projects/", process.env.BACKEND_URL),
+    );
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.status}`);
     }

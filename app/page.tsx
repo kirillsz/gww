@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <section className="container py-section--lg">
-        <h1 className="fs-800 ls-025 mb-150">
+        <h1 className="fs-800 ls-025 mb-150 ">
           Мы создаём <span className="fw-bold">уникальные</span> решения для
           бизнеса
         </h1>

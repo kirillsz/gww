@@ -10,20 +10,23 @@ type ContactFormInputs = {
 };
 
 const ContactForm = () => {
-  const [formStatus, setFormStatus] = useState(false);
+  const [isPending, setisPending] = useState(false);
   const [buttonText, setButtonText] = useState("Оставить заявку");
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<ContactFormInputs>();
+
   const onSubmit = async (data) => {
-    setFormStatus(true);
-    const result = await postData("http://127.0.0.1:9000/api/pipls/", data);
-    console.log(result);
-    if (result === 201) {
-      setButtonText("Заявка отправлена успешно!");
+    setisPending(true);
+    const result = await postData("/api/pipls/", data);
+    if (result !== 201) {
+      alert("Произошла ошибка, попробуйте еще раз!");
+      setisPending(false);
+      return;
     }
+    setButtonText("Заявка отправлена успешно!");
   };
   return (
     <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
@@ -47,7 +50,7 @@ const ContactForm = () => {
         )}
       </div>
 
-      <Button text={buttonText} disabled={formStatus} />
+      <Button text={buttonText} disabled={isPending} />
     </form>
   );
 };

@@ -1,5 +1,3 @@
-const BASE_URL = "http://127.0.0.1:9000";
-
 const navLinks = [
   { name: "Направления", path: "#areas" },
   { name: "Проекты", path: "#portfolio" },
