@@ -3,10 +3,21 @@ interface ButtonProps {
   type?: "primary" | "accent";
   className?: string;
   pending?: boolean;
+  disabled?: boolean;
 }
-const Button = ({ className, type = "primary", text }: ButtonProps) => {
+const Button = ({
+  className,
+  type = "primary",
+  text,
+  disabled = false,
+}: ButtonProps) => {
   return (
-    <button className="button fs-300 fw-medium" type="submit" data-type={type}>
+    <button
+      disabled={disabled}
+      className="button fs-300 fw-medium"
+      type="submit"
+      data-type={type}
+    >
       {text}
     </button>
   );

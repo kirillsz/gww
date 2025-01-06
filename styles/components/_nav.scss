@@ -18,6 +18,10 @@
     }
     & .contact-form {
       grid-template-columns: auto;
+      & .input-box__text {
+        position: relative;
+        bottom: 0;
+      }
     }
   }
   .nav-link {

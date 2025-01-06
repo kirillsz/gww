@@ -14,7 +14,6 @@ const Header = () => {
       </div>
 
       <button
-        tabIndex={0}
         className="mobile-nav-toggle"
         aria-controls="primary-navigation"
         aria-expanded={isVisible}
@@ -28,7 +27,9 @@ const Header = () => {
         <NavigationList />
         <hr />
         <ContactForm />
-        <Telegram />
+        <a aria-label="Написать нам в Telegram" href="https://t.me/andreySTA">
+          <Telegram />
+        </a>
       </nav>
     </header>
   );

@@ -10,6 +10,13 @@
   @include mq(large) {
     padding: 0.75rem;
   }
-  &-label {
+  &-box {
+    display: grid;
+    position: relative;
+    gap: 2px;
+    &__text {
+      position: absolute;
+      bottom: -1.5rem;
+    }
   }
 }

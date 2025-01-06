@@ -1,12 +1,25 @@
 import PortfolioItem from "../PortfolioItem";
 import { BASE_URL } from "@/data";
 export default async function PortfolioList() {
-  const data = await fetch(`${BASE_URL}/api/projects/`);
-  const portfolio = await data.json();
-  console.log(portfolio);
+  let data = [];
+  try {
+    const response = await fetch(`${BASE_URL}/api/projects/`);
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.status}`);
+    }
+    data = await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+  if (data.length === 0)
+    return (
+      <h3 style={{ textAlign: "center" }}>
+        Не удалось получить список проектов
+      </h3>
+    );
   return (
     <div className="portfolio-item-list">
-      {portfolio.map((item) => (
+      {data.map((item) => (
         <PortfolioItem key={item.name} {...item} />
       ))}
     </div>

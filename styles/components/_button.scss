@@ -19,14 +19,17 @@
   }
   &[data-type="primary"] {
     background-color: hsl(var(--color-default));
-    &:is(:hover, :focus) {
+    &:is(:hover, :focus-visible) {
       background-color: hsl(var(--color-default) / 0.8);
     }
   }
   &[data-type="accent"] {
     background-color: hsl(var(--color-accent--dark));
-    &:is(:hover, :focus) {
+    &:is(:hover, :focus-visible) {
       background-color: hsl(var(--color-accent--dark) / 0.8);
     }
+  }
+  &:disabled {
+    background-color: hsl(var(--color-default) / 0.6);
   }
 }
