@@ -1,4 +1,4 @@
-import PortfolioItem from "../PortfolioItem";
+import PortfolioItem, { PortfolioItemProps } from "../PortfolioItem";
 export default async function PortfolioList() {
   let data = [];
   try {
@@ -20,7 +20,7 @@ export default async function PortfolioList() {
     );
   return (
     <div className="portfolio-item-list">
-      {data.map((item) => (
+      {data.map((item: PortfolioItemProps) => (
         <PortfolioItem key={item.name} {...item} />
       ))}
     </div>

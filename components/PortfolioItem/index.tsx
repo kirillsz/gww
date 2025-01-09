@@ -1,6 +1,6 @@
 import PortfolioTag from "../PortfolioTag";
 
-interface PortfolioItemProps {
+export interface PortfolioItemProps {
   name: string;
   tags: string | string[];
   img: string;

@@ -1,8 +1,8 @@
-import ServiceCard from "../ServiceCard";
+import ServiceCard, { ServiceCardProps } from "../ServiceCard";
 
 interface ServiceCollectionProps {
   heading: string;
-  collection: object[];
+  collection: ServiceCardProps[];
 }
 const ServiceCollection = ({ heading, collection }: ServiceCollectionProps) => {
   return (
@@ -13,8 +13,8 @@ const ServiceCollection = ({ heading, collection }: ServiceCollectionProps) => {
         </h3>
       </header>
       <div className="collection-card-list">
-        {collection.map((service, index) => (
-          <ServiceCard key={index} service={service} />
+        {collection.map((card) => (
+          <ServiceCard key={card.name} {...card} />
         ))}
       </div>
     </section>
