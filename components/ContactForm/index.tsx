@@ -18,7 +18,7 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<ContactFormInputs>();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: ContactFormInputs) => {
     setisPending(true);
     const result = await postData("/api/pipls/", data);
     if (result !== 201) {
