@@ -11,7 +11,7 @@ const postData = async (url: string | URL, data: object) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    return await response.status;
+    return response.status;
   } catch (error) {
     console.error("There was an error!", error);
   }

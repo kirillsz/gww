@@ -29,22 +29,5 @@ const areas = {
     },
   ],
 };
-const portfolio = [
-  {
-    name: "Интернет-магазин неоновых вывесок",
-    tags: ["Интернет-магазин", "Backend", "UI/UX"],
-    img: "/portfolio/neon.jpg",
-  },
-  {
-    name: "Лендинг юридической компании «Олимп»",
-    tags: ["Лендинг", "Backend", "UI/UX"],
-    img: "/portfolio/olymp.jpg",
-  },
-  {
-    name: "Лендинг с конфигуратором «Твои Часы»",
-    tags: ["Лендинг", "Backend", "UI/UX"],
-    img: "/portfolio/you-watches.jpg",
-  },
-];
 
 export { navLinks, areas, portfolio, BASE_URL };
