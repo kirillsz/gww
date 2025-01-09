@@ -1,16 +1,10 @@
 interface ButtonProps {
   text: string;
   type?: "primary" | "accent";
-  className?: string;
   pending?: boolean;
   disabled?: boolean;
 }
-const Button = ({
-  className,
-  type = "primary",
-  text,
-  disabled = false,
-}: ButtonProps) => {
+const Button = ({ type = "primary", text, disabled = false }: ButtonProps) => {
   return (
     <button
       disabled={disabled}
