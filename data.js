@@ -30,4 +30,4 @@ const areas = {
   ],
 };
 
-export { navLinks, areas, portfolio, BASE_URL };
+export { navLinks, areas };
