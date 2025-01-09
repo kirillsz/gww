@@ -2,7 +2,12 @@
 import { createContext, PropsWithChildren, useState } from "react";
 import type { FC } from "react";
 
-export const MenuContext = createContext({});
+interface MenuContextProps {
+  isVisible: boolean;
+  toggleMenuVisibility: () => void;
+}
+
+export const MenuContext = createContext<Partial<MenuContextProps>>({});
 
 const MenuProvider: FC<PropsWithChildren> = ({ children }) => {
   const [isVisible, setisVisible] = useState(false);
