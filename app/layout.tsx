@@ -6,9 +6,10 @@ import MenuProvider from "@/components/providers/menuProvider";
 import "@/styles/main.scss";
 
 export const metadata: Metadata = {
-  title: "Global Web Work",
-  description:
-    "Студия разработки сайтов Global Web Work - чётко, слаженно, доступно",
+  title: "Global Web World",
+  description: "Студия Gobal Web World - мы разработаем вам сайт!",
+  keywords:
+    "Разработка сайтов, разработатка лендингов, разработка телеграм бота",
 };
 
 export default function RootLayout({
