@@ -1,13 +1,8 @@
 import PortfolioItem, { PortfolioItemProps } from "../PortfolioItem";
 
-async function getPortfolio() {
-  const req = await fetch(`${process.env.URL}/api/projects/`);
-  const res = await req.json();
-  return res;
-}
-
 export default async function PortfolioList() {
-  const projects = await getPortfolio();
+  const req = await fetch(`${process.env.URL}/api/projects/`);
+  const projects = await req.json();
 
   if (projects.length === 0)
     return (
