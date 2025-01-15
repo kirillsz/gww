@@ -1,16 +1,15 @@
 import PortfolioItem, { PortfolioItemProps } from "../PortfolioItem";
+
+async function getPortfolio() {
+  const req = await fetch(`${process.env.URL}/api/projects/`);
+  const res = await req.json();
+  return res;
+}
+
 export default async function PortfolioList() {
-  let data = [];
-  try {
-    const response = await fetch(`${process.env.URL}/api/projects/`);
-    if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.status}`);
-    }
-    data = await response.json();
-  } catch (error) {
-    console.log(error);
-  }
-  if (data.length === 0)
+  const projects = await getPortfolio();
+
+  if (projects.length === 0)
     return (
       <h3 style={{ textAlign: "center" }}>
         Не удалось получить список проектов
@@ -18,8 +17,8 @@ export default async function PortfolioList() {
     );
   return (
     <div className="portfolio-item-list">
-      {data.map((item: PortfolioItemProps) => (
-        <PortfolioItem key={item.name} {...item} />
+      {projects.map((project: PortfolioItemProps) => (
+        <PortfolioItem key={project.name} {...project} />
       ))}
     </div>
   );
