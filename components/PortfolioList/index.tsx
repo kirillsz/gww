@@ -1,21 +1,21 @@
+"use client";
+import { useEffect, useState } from "react";
 import PortfolioItem, { PortfolioItemProps } from "../PortfolioItem";
-export default async function PortfolioList() {
-  let data = [];
-  try {
-    const response = await fetch(`${process.env.URL}/api/projects/`);
-    if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.status}`);
-    }
-    data = await response.json();
-  } catch (error) {
-    console.log(error);
+export default function PortfolioList() {
+  const [data, setData] = useState([]);
+
+  async function fetchData() {
+    const req = await fetch(`https://globalwebworld.online/api/projects/`);
+    const res = await req.json();
+    setData(res);
   }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   if (data.length === 0)
-    return (
-      <h3 style={{ textAlign: "center" }}>
-        Не удалось получить список проектов
-      </h3>
-    );
+    return <h3 style={{ textAlign: "center" }}>Получаем список проектов...</h3>;
   return (
     <div className="portfolio-item-list">
       {data.map((item: PortfolioItemProps) => (
