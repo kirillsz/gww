@@ -7,9 +7,13 @@ import "@/styles/main.scss";
 
 export const metadata: Metadata = {
   title: "Global Web World",
-  description: "Студия Gobal Web World - мы разработаем вам сайт!",
-  keywords:
-    "Разработка сайтов, разработатка лендингов, разработка телеграм бота",
+  description:
+    "Студия разработки сайтов, лендингов, интернет-магазинов и телеграм ботов",
+  keywords: ["Разработка сайтов", "Разработатка лендингов", "Разработка ботов"],
+  icons: {
+    icon: "/static/images/favicons/favicon-32x32.png",
+    apple: "/static/images/favicons/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

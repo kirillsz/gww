@@ -7,25 +7,25 @@ const areas = {
   "WEB-разработка": [
     {
       name: "Вёрстка лендингов, интернет-магазинов",
-      icon: "/areas/frontend.svg",
+      icon: "/static/logos/frontend.svg",
     },
     {
       name: "Backend разработка",
-      icon: "/areas/backend.svg",
+      icon: "/static/logos/backend.svg",
     },
   ],
   "Бизнесс-продвижение": [
     {
       name: "Инвайтинг людей в Telegram каналы",
-      icon: "/areas/inviting.svg",
+      icon: "/static/logos/inviting.svg",
     },
     {
       name: "Автоматизация бизнесс процессов",
-      icon: "/areas/automatization.svg",
+      icon: "/static/logos/automatization.svg",
     },
     {
       name: "Разработка Telegram ботов",
-      icon: "/areas/bots.svg",
+      icon: "/static/logos/bots.svg",
     },
   ],
 };
