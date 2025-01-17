@@ -1,8 +1,10 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { defaultFont } from "@/styles/fonts";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MenuProvider from "@/components/providers/menuProvider";
+import { Metrika } from "@/components/metrika";
 import "@/styles/main.scss";
 
 export const metadata: Metadata = {
@@ -29,6 +31,9 @@ export default function RootLayout({
         </MenuProvider>
         <main>{children}</main>
         <Footer />
+        <Suspense>
+          <Metrika />
+        </Suspense>
       </body>
     </html>
   );
