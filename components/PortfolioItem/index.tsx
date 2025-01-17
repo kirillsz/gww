@@ -15,7 +15,7 @@ const PortfolioItem = ({ name, tags, img, url }: PortfolioItemProps) => {
   return (
     <article className="portfolio-item">
       <div className="portfolio-item__img">
-        <img src={`${img}`} alt={`Иллюстрация ${name}`} />
+        <img src={img} alt={`Иллюстрация ${name}`} />
         {url !== "/" && (
           <a className="portfolio-item__link" href={url}>
             <span className="sr-only">Ссылка на {name}</span>
