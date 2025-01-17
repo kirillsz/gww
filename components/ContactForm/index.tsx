@@ -40,11 +40,13 @@ const ContactForm = () => {
           placeholder="@Telegram, WhatsApp, Email"
           className="input fs-300 fw-medium"
           aria-invalid={errors.date ? "true" : "false"}
-          autoComplete="email"
           {...register("date", { required: true })}
         />
         {errors.date && (
-          <p className="input-box__text fs-300 fw-medium">
+          <p
+            className="input-box__text fs-300 fw-medium"
+            style={{ color: "red" }}
+          >
             Это обязательное поле
           </p>
         )}
