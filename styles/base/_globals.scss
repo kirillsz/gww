@@ -63,13 +63,6 @@ h6 {
   font-weight: 400;
 }
 
-.icon {
-  transition: fill 250ms ease;
-  &:hover {
-    fill: hsl(var(--color-secondary));
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;

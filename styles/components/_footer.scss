@@ -22,7 +22,7 @@
   & span {
     color: white;
   }
-  &:hover {
+  &:is(:hover, :focus) {
     background-color: hsl(var(--bg-color) / 0.8);
   }
 }

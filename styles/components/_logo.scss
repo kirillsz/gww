@@ -3,7 +3,7 @@
   letter-spacing: -0.15em;
   font-size: 1.75rem;
   font-weight: var(--fw-bold);
-  transition: color 1000ms ease;
+  transition: color 350ms ease;
   &:is(:hover, :focus) {
     color: hsl(var(--color-secondary));
   }

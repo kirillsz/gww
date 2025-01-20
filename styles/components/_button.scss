@@ -19,13 +19,13 @@
   }
   &[data-type="primary"] {
     background-color: hsl(var(--color-foreground));
-    &:is(:hover, :focus-visible) {
+    &:is(:hover, :focus) {
       background-color: hsl(var(--color-foreground) / 0.8);
     }
   }
   &[data-type="accent"] {
     background-color: hsl(var(--color-accent--dark));
-    &:is(:hover, :focus-visible) {
+    &:is(:hover, :focus) {
       background-color: hsl(var(--color-accent--dark) / 0.8);
     }
   }
