@@ -27,7 +27,7 @@ const Header = () => {
         <NavigationList />
         <hr />
         <section>
-          <p className="fs-400 fw-medium hidden-md">Оставить заявку</p>
+          <p className="fs-400  hidden-md">Заявка на сотрудничество</p>
           <ContactForm />
         </section>
 
