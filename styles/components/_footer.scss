@@ -7,7 +7,7 @@
 .new-project {
   gap: 0.65em;
   transition: 350ms ease;
-  --bg-color: var(--color-default);
+  --bg-color: var(--color-foreground);
   background-color: hsl(var(--bg-color));
   border-radius: 60px;
   padding: 0.5em 0.75em 0.5em 0.5em;

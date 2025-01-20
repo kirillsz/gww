@@ -6,7 +6,7 @@
   padding: 0.5em 1.5em;
   border-radius: 0.5rem;
   transition: background-color 350ms ease;
-  color: hsl(var(--color-default--reverse));
+  color: hsl(var(--color-background));
   @include mq(large) {
     padding: 0.75em 1.75em;
   }
@@ -18,9 +18,9 @@
     inset: 0;
   }
   &[data-type="primary"] {
-    background-color: hsl(var(--color-default));
+    background-color: hsl(var(--color-foreground));
     &:is(:hover, :focus-visible) {
-      background-color: hsl(var(--color-default) / 0.8);
+      background-color: hsl(var(--color-foreground) / 0.8);
     }
   }
   &[data-type="accent"] {
@@ -30,6 +30,6 @@
     }
   }
   &:disabled {
-    background-color: hsl(var(--color-default) / 0.6);
+    background-color: hsl(var(--color-foreground) / 0.6);
   }
 }

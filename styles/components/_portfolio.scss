@@ -42,8 +42,8 @@
     padding: 0.5rem 1rem;
     background: hsl(var(--color-neutral-800));
     &:first-of-type {
-      background-color: hsl(var(--color-default));
-      color: hsl(var(--color-default--reverse));
+      background-color: hsl(var(--color-foreground));
+      color: hsl(var(--color-background));
     }
     &-list {
       display: flex;

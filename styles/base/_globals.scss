@@ -1,11 +1,9 @@
 @use "../abstracts/" as *;
 :root {
-  --color-default: 0 0% 5%;
-  --color-default--reverse: 0 0 100%;
+  --color-foreground: 0 0% 5%;
+  --color-background: 0 0% 100%;
+  --color-secondary: 0 0% 50%;
   --color-neutral-800: 0 0% 96%;
-  --color-secondary: 0 0 50%;
-  --color-accent--dark: 227 81% 45%;
-  --color-accent--light: 227 100% 60%;
 
   --container-max-width: 78rem;
   --container-padding-inline: 1.25rem;
@@ -46,9 +44,8 @@ body {
 }
 
 body {
-  color: hsl(var(--color-default));
-  background: hsl(var(--color-default--reverse));
-
+  color: hsl(var(--color-foreground));
+  background: hsl(var(--color-background));
   font-size: var(--fs-400);
   line-height: 1.5;
   font-family: var(--ff-default);

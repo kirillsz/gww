@@ -1,11 +1,11 @@
 .bg-default {
-  background-color: hsl(var(--color-default));
+  background-color: hsl(var(--color-foreground));
 }
 .bg-accent--dark {
   background-color: hsl(var(--color-accent--dark));
 }
 .text-default--reverse {
-  color: hsl(var(--color-default--reverse));
+  color: hsl(var(--color-background));
 }
 .text-accent--dark {
   color: hsl(var(--color-accent--dark));
