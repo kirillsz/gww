@@ -26,7 +26,11 @@ const Header = () => {
       <nav className="primary-navigation" data-visible={isVisible}>
         <NavigationList />
         <hr />
-        <ContactForm />
+        <section>
+          <p className="fs-400 fw-medium hidden-md">Оставить заявку</p>
+          <ContactForm />
+        </section>
+
         <a aria-label="Написать нам в Telegram" href="https://t.me/andreySTA">
           <Telegram />
         </a>

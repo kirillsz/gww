@@ -29,31 +29,33 @@ const ContactForm = () => {
     setButtonText("Заявка отправлена успешно!");
   };
   return (
-    <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
-      <div className="input-box">
-        <input
-          className="sr-only"
-          defaultValue="GWW_USER"
-          {...register("name")}
-        />
-        <input
-          placeholder="@Telegram, WhatsApp, Email"
-          className="input fs-300 fw-medium"
-          aria-invalid={errors.date ? "true" : "false"}
-          {...register("date", { required: true })}
-        />
-        {errors.date && (
-          <p
-            className="input-box__text fs-300 fw-medium"
-            style={{ color: "red" }}
-          >
-            Это обязательное поле
-          </p>
-        )}
-      </div>
+    <div>
+      <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="input-box">
+          <input
+            className="sr-only"
+            defaultValue="GWW_USER"
+            {...register("name")}
+          />
+          <input
+            placeholder="@Telegram, WhatsApp, Email"
+            className="input fs-300 fw-medium"
+            aria-invalid={errors.date ? "true" : "false"}
+            {...register("date", { required: true })}
+          />
+          {errors.date && (
+            <p
+              className="input-box__text fs-300 fw-medium"
+              style={{ color: "red" }}
+            >
+              Это обязательное поле
+            </p>
+          )}
+        </div>
 
-      <Button text={buttonText} disabled={isPending} />
-    </form>
+        <Button text={buttonText} disabled={isPending} />
+      </form>
+    </div>
   );
 };
 

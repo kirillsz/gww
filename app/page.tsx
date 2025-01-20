@@ -28,7 +28,7 @@ export default function Home() {
       </section>
       <section id="portfolio" className="portfolio container py-section--lg">
         <header>
-          <h2 className="mb-h2 fs-700 fw-semibold">Проекты</h2>
+          <h2 className="mb-h2 fs-700 fw-semibold">Лучшие проекты</h2>
         </header>
         <PortfolioList />
       </section>

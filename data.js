@@ -1,6 +1,6 @@
 const navLinks = [
   { name: "Направления", path: "#areas" },
-  { name: "Проекты", path: "#portfolio" },
+  { name: "Лучшие проекты", path: "#portfolio" },
 ];
 
 const areas = {
@@ -14,13 +14,13 @@ const areas = {
       icon: "/static/logos/backend.svg",
     },
   ],
-  "Бизнесс-продвижение": [
+  "Бизнес-продвижение": [
     {
       name: "Инвайтинг людей в Telegram каналы",
       icon: "/static/logos/inviting.svg",
     },
     {
-      name: "Автоматизация бизнесс процессов",
+      name: "Автоматизация бизнес процессов",
       icon: "/static/logos/automatization.svg",
     },
     {

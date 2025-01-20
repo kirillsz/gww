@@ -60,3 +60,9 @@
     margin-bottom: 1.5rem;
   }
 }
+
+.hidden-md {
+  @include mq(medium) {
+    display: none;
+  }
+}
